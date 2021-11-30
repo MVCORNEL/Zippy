@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-background;
+}
+
+html {
+    font-size: 62.5%; //1rem
+
+    @include respond(tab-land) {
+        //width <1200?
+        //width <900?
+        font-size: 56.25%; //1 rem = 9px
+    }
+
+    @include respond(tab-port) {
+        //width <900?
+        //width < 600?
+        font-size: 50%; //1rem rem = 8px
+    }
+}
+
+
+::selection {
+    background-color: $color-primary-3;
+}

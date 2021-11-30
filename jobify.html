@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zippy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- <link rel="stylesheet" href="src/sass/style.scss"> -->
+    <script type="module" src="src/js/controllers/controller.js"></script>
+  </head>
+
+  <body id="jobify" class="grid-container grid-container--jobify">
+    <nav class="nav">
+      <ul class="nav__menu">
+        <li class="nav__logo">
+          <img src="src/img/logo.png" alt="logo" class="logo" />
+        </li>
+
+        <li class="nav__link">
+          <a href="index.html" class="nav__link-link">Home</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" class="nav__link-link nav__link-link--current">Jobify</a>
+        </li>
+        <li class="nav__link">
+          <a href="about.html" class="nav__link-link">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="contact.html" class="nav__link-link">Contact</a>
+        </li>
+
+        <li class="nav__user">
+          <a href="authentification.html" class="nav__user-btn btn">Login</a>
+          <!-- <div class="user">
+                    <div class="user__notification">
+                        <svg class="user__notification-icon">
+                            <use xlink:href="src/img/sprite.svg#icon-chat">
+                        </svg>
+                        <span class="user__notification-bubble">7</span>
+                    </div>
+
+                    <div class="user__notification">
+                        <svg class="user__notification-icon">
+                            <use xlink:href="src/img/sprite.svg#icon-bookmark">
+                        </svg>
+                        <span class="user__notification-bubble">7</span>
+                    </div>
+
+                    <img class="user__image" src="src/img/user.jpg" alt="image founder ISK">
+                </div> -->
+        </li>
+
+        <li class="nav__hamburger">
+          <div class="hamburger">
+            <input type="checkbox" class="hamburger__cb" id="hamburger__cb" />
+            <label for="hamburger__cb" class="hamburger__button"><span class="hamburger__icon"></span></label>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="section-menu">
+      <div class="menu">
+        <div class="myjobs">
+          <span class="myjobs__btn"> My gigs</span>
+          <ul class="myjobs__list">
+            <li class="myjobs__job">
+              <span class="myjobs__job-role">Waiter/Waitress</span>
+              <span class="myjobs__job-status">Pending...</span>
+              <!-- <span class="myjobs__job-date text-important">Date</span>
+                        <span class="myjobs__job-location text-important">Location</span> -->
+            </li>
+            <li class="myjobs__job">
+              <span class="myjobs__job-role">Waiter/Waitress</span>
+              <span class="myjobs__job-status">Accepted</span>
+            </li>
+            <li class="myjobs__job">
+              <span class="myjobs__job-role">Striker</span>
+              <span class="myjobs__job-status">Accepted</span>
+            </li>
+            <li class="myjobs__job">
+              <span class="myjobs__job-role">Runner</span>
+              <span class="myjobs__job-status">Accepted</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-filter">
+      <form class="form--search">
+        <h1>Extra filter</h1>
+
+        <div class="form__control form__control--search">
+          <input type="text" name="text" class="form__input form__input--search" placeholder="Job, Title, Company..." />
+          <label>
+            <svg class="form__control--search-icon">
+              <use xlink:href="src/img/sprite.svg#icon-magnifier"></use>
+            </svg>
+          </label>
+        </div>
+
+        <div class="form__control">
+          <label class="form__label">Sort by</label>
+          <select class="form__input form__input--select">
+            <option>Newest Posted</option>
+            <option>Price per hour</option>
+            <option>Distance</option>
+          </select>
+        </div>
+
+        <div class="form__control">
+          <label class="form__label">Type of work</label>
+          <select class="form__input form__input--select">
+            <option>All</option>
+            <option>Barista</option>
+            <option>Chef</option>
+            <option>Receptionist</option>
+            <option>Security</option>
+            <option>Striker</option>
+          </select>
+        </div>
+
+        <div class="form__control">
+          <label class="form__label">Location</label>
+          <select class="form__input form__input--select">
+            <option>London</option>
+            <option>Birmingham</option>
+            <option>Liverpool</option>
+            <option>Southampton</option>
+            <option>Ipswich</option>
+            <option>Exeter</option>
+          </select>
+        </div>
+
+        <div class="form__control">
+          <label class="form__label">Minimum Price <span class="form__slider-value"></span> £/hour </label>
+          <div class="form__slider">
+            <input type="range" class="form__slider-input" min="10" max="29" value="0" step="1" />
+          </div>
+        </div>
+
+        <div class="form__control">
+          <label class="form__label">Duration</label>
+          <select class="form__input form__input--select">
+            <option>1 day gig</option>
+            <option>1 to 3 days gig</option>
+            <option>1 week job</option>
+            <option>more than 2 weeks job</option>
+          </select>
+        </div>
+      </form>
+    </section>
+
+    <section class="section-gigs">
+      <div class="gig">
+        <img class="gig__logo" src="src/img/seenon-2.png" alt="logo" />
+        <div class="gig__box">
+          <div class="gig__header">
+            <span class="gig__header-title">Striker</span>
+            <button class="gig__header-apply btn btn--gig">Apply</button>
+          </div>
+
+          <div class="gig__detail text-important">
+            <svg class="gig__icon">
+              <use xlink:href="src/img/sprite.svg#icon-location-pin"></use>
+            </svg>
+            <span>London, Chobham Road E151LZ </span>
+          </div>
+
+          <div class="gig__detail text-important">
+            <svg class="gig__icon">
+              <use xlink:href="src/img/sprite.svg#icon-credit"></use>
+            </svg>
+            <span>10.5£ per hour</span>
+          </div>
+
+          <div class="gig__detail text-important">
+            <svg class="gig__icon">
+              <use xlink:href="src/img/sprite.svg#icon-calendar"></use>
+            </svg>
+            <span>16 November 7:00AM - 2:00PM</span>
+          </div>
+
+          <p class="gig__text gig__text-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facere quisquam libero quidem quae
+            inventore, sequi numquam maxime aliquid, asperiores voluptates!
+          </p>
+
+          <div class="gig__equipment">
+            <div class="gig__cloth">
+              <img class="gig__cloth-img" src="src/img/suite.jpg" alt="equipment" />
+              <div class="gig__cloth-title">Shirt</div>
+            </div>
+
+            <div class="gig__cloth">
+              <img class="gig__cloth-img" src="src/img/suite.jpg" alt="equipment" />
+              <div class="gig__cloth-title">Trousers</div>
+            </div>
+
+            <div class="gig__cloth">
+              <img class="gig__cloth-img" src="src/img/suite.jpg" alt="equipment" />
+              <div class="gig__cloth-title">Tie</div>
+            </div>
+          </div>
+        </div>
+        <span class="text-important gig__more btn-text">more &rarr; </span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__media">
+        <img class="logo footer__media-logo" src="src/img/logo.png" alt="logo" />
+        <p class="footer__media-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sunt laudantium doloribus ut enim ea nisi labore!
+          Commodi, laboriosam omnis.
+        </p>
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-facebook-with-circle"></use>
+        </svg>
+
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-github-with-circle"></use>
+        </svg>
+
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-instagram-with-circle"></use>
+        </svg>
+
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-twitter-with-circle"></use>
+        </svg>
+      </div>
+
+      <div class="footer__lists">
+        <ul class="footer__list footer__list--about">
+          <li class="footer__list-heading">About</li>
+          <li>About us</li>
+          <li>Services</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li><a class="footer__link" href="credits.html">Credits</a></li>
+        </ul>
+
+        <ul class="footer__list footer__list--company">
+          <li class="footer__list-heading">Company</li>
+          <li>Out Team</li>
+          <li>FAQ</li>
+        </ul>
+
+        <ul class="footer__list footer__list--support">
+          <li class="footer__list-heading">Support</li>
+          <li>Account</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
+
+      <div class="footer__copyright">
+        <p class="footer__copyright-copy">&copy; Copyright 2021 by Manea Valentin Cornel.</p>
+        <p class="footer__copyright-terms">Privacy Policy & Terms of use</p>
+      </div>
+    </footer>
+  </body>
+</html>

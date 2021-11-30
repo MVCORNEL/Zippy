@@ -1,0 +1,46 @@
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &>* {
+        cursor: pointer;
+
+        &:not(:first-child) {
+            margin-left: 2rem;
+        }
+    }
+
+    &__image {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+    }
+
+    &__notification {
+        position: relative;
+
+        &-icon {
+            fill: $color-grey-dark-1;
+            width: 2.75rem;
+            height: 2.75rem;
+            display: block;
+        }
+
+        &-bubble {
+            font-size: 0.8rem;
+            height: 1.30rem;
+            width: 1.30rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+            position: absolute;
+            left: 50%;
+            bottom: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-white;
+        }
+    }
+
+}

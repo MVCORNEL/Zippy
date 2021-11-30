@@ -1,18 +1,27 @@
 {
-  "name": "isk-construct",
+  "name": "zippy",
   "version": "1.0.0",
-  "description": "ISK Fictional agency project",
+  "description": "Zippy",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass src/sass/style.scss src/css/style.css -w ",
+    "watch:sass": "sass src/sass/style.scss src/css/style.css -w",
     "devserver": "live-server --browser=chrome",
-    "start:sass": "npm-run-all --parallel devserver watch:sass"
+    "start:sass": "npm-run-all --parallel devserver watch:sass",
+    "build": "parcel build index.html --dist-dir ./dist",
+    "start": "parcel index.html"
   },
   "author": "Manea Valentin Cornel",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.1",
+    "@parcel/transformer-sass": "^2.0.0",
+    "live-server": "^1.1.0",
     "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0",
     "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "core-js": "^3.18.3",
+    "leaflet": "^1.7.1",
+    "regenerator-runtime": "^0.13.9"
   }
 }

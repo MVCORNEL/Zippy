@@ -1,0 +1,14 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: [full-start] minmax(var(--margin-grid),1fr) [center-start] minmax(min-content,120rem) [center-end] minmax(var(--margin-grid), 1fr) [full-end];
+    grid-template-rows: minmax(min-content, max-content);
+
+    &--jobify{
+        grid-template-columns: [full-start] minmax(var(--margin-grid),1fr) [center-start] repeat(4, [col-start] minmax(min-content,30rem) [col-end]) [center-end] minmax(var(--margin-grid), 1fr) [full-end];
+    }
+        
+}
+
+
+
+

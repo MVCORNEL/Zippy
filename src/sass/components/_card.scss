@@ -1,0 +1,35 @@
+.card {
+    background-color: white;
+    box-shadow: 0 2rem 5rem rgba(#000, 0.25);
+    width: 35rem;
+    height: 40rem;
+    padding: 5rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 2rem;
+        font-family: $font-display;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $color-primary;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    &__description {
+      text-align: center;
+      margin-top:2rem;
+    }
+
+    &__image {
+        fill: $color-primary;
+        width: 10rem;
+        height: 10rem; 
+    }
+
+}
+

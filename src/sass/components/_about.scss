@@ -1,0 +1,92 @@
+.about {
+    display: flex;
+    flex-direction: column;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto, 50%));
+        &:nth-child(odd){
+            margin-bottom: 10rem;
+        }
+      
+        @include respond(tab-port) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        grid-row: 1/ span 5;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 3rem;
+
+        &--phone {
+            grid-column: 1/2;
+            max-width: 50%;
+         
+        
+            @include respond(tab-port) {
+                max-width: 25%;
+            }
+        }
+
+        &--laptop {
+            max-width: 75%;
+
+            @include respond(tab-port) {
+                max-width: 50%;
+            }
+        }
+
+        &:nth-child(odd) {
+            grid-column: 2/3;
+        }
+    }
+
+    &__heading {
+        grid-row: 1/2;
+        margin-bottom: 5rem;
+        @include respond(tab-port) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__feature {
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: minmax(min, max);
+        row-gap: 1rem;
+        column-gap: 2rem;
+
+        &-icon {
+            display: block;
+            width: 2.75rem;
+            height: 2.75rem;
+            fill: $color-primary;
+            grid-column: 1/2;
+            grid-row: 1/-1;
+        }
+
+        &-title {
+            grid-column: 2/3;
+        }
+
+        &-text {
+            text-align: justify;
+            grid-column: 2/3;
+        }
+    }
+
+    &__btns {
+        margin-top: 2rem;
+    }
+
+    &__btn {
+        &:last-child {
+            margin-left: 2rem;
+        }
+    }
+
+}

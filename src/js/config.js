@@ -1,0 +1,1 @@
+export const WINDOW_QUERRY_TAB = '900';

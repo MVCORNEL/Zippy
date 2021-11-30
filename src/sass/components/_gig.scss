@@ -1,0 +1,122 @@
+.gig {
+    position: relative;
+    display: flex;
+    transition: all 0.5s 0.2s;
+    &:not(:last-child) {
+        margin-bottom: 6rem;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: -3rem;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: $color-grey-dark-4;
+    }
+
+    &__logo {
+        border-radius: 4px;
+        border: 1px solid $color-grey-dark-4;
+        padding: 1rem;
+        width: 10rem;
+        height: 10rem;
+        grid-column: 1/2;
+        display: block;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        &-title {
+            font-size: 2rem;
+            color: $color-primary;
+            font-weight: 700;
+            grid-column: 2/3;
+        }
+
+        &-apply {
+            display: inline-block;
+        }
+    }
+
+    &__detail {
+        grid-column: 2/3;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+
+        //ACTIVE
+        &--active>.gig__equipment {
+            display: flex;
+        }
+
+        &--active>.gig__more {
+      
+        }
+
+    }
+
+    &__equipment {
+        margin-top: 1rem;
+        grid-column: 2/3;
+        display: none;
+        flex-direction: row;
+    }
+    
+    &__icon {
+        margin-right: 1rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: $color-grey-dark-3;
+    }
+
+    &__description {
+        grid-column: 2/3;
+        text-align: justify;
+    }
+
+
+
+    &__cloth {
+        margin-right: 2rem;
+
+        &-img {
+            width: 10rem;
+            height: 10rem;
+
+            @include respond(tab-port) {
+                width: 7.5rem;
+                height: 7.5rem;
+            }
+        }
+
+        &-title {
+            text-align: center;
+            display: block;
+        }
+    }
+
+    &__text {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        font-style: italic;
+        padding: 1rem;
+        background-color: $color-background-light;
+    }
+
+
+
+
+
+
+
+
+}

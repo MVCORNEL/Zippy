@@ -1,0 +1,72 @@
+.menu {
+    display: grid;
+    grid-template-columns: [full-start] minmax(var(--margin-grid), 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 60rem) [col-end]) [center-end] minmax(var(--margin-grid), 1fr) [full-end];
+    background-color: $color-grey-dark-4;
+    margin-bottom: 4rem;
+}
+
+.myjobs {
+    position: relative;
+    grid-column: col-start 2 / col-end 2;
+    justify-self: end;
+    cursor: pointer;
+
+    &:hover > .myjobs__list {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__btn {
+        display: block;
+        align-self: center;
+        background-color: $color-primary-4;
+        align-self: center;
+        font-size: 2rem;
+        padding: 1rem;
+        font-family: $font-display;
+        transition: all 0.5s 0.2s;
+    }
+
+    &__list {
+        padding: 2rem;
+        transition: all 0.5s 0.2s;
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        z-index: 2;
+        visibility: hidden;
+        list-style: none;
+        background-color: $color-white;
+        box-shadow: 0 0.8rem 5rem 2rem rgba(#000, 0.1);
+        width: 35rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &__job {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: start;
+
+        &-role {
+            margin-right: auto;
+            justify-self: start;
+            font-size: 2rem;
+            color: $color-primary;
+            font-weight: 700;
+        }
+
+        &-location {
+            flex-basis: 100%;
+        }
+
+        &-date {
+            flex-basis: 100%;
+        }
+
+        &-status {
+            color: green;
+        }
+    }
+
+}

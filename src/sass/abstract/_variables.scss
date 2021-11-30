@@ -1,0 +1,48 @@
+//FONT
+$default-font-size: 1.6rem;
+//FONT
+$font-primary: 'Quicksand', sans-serif;
+$font-display:  'Open Sans', sans-serif;
+//PALLETE
+$color-primary: #e74c3c;
+$color-primary-1: #eb685a;
+$color-primary-2: #f09188;
+$color-primary-3: #f6bbb5;
+$color-primary-4: #fbe5e2;
+
+$color-wrong:  #e74c3c;
+$color-correct: #2ecc71;
+
+$color-sunflower: #f1c40f;
+$color-orange: #f39c12;
+// $color-emerald: #2ecc71;
+// $color-primary:#d63031;
+$color-background: #f9f9f9;
+$color-background-light: #f1f1f1;
+$color-black: #000;
+$color-white: #FFF;
+$color-grey-dark-1: #444;
+$color-grey-dark-2: rgb(72, 72, 72);
+$color-grey-dark-3: #999;
+$color-grey-dark-4: #ccc;
+////HAMBURGER
+$ham-line-height: 0.2rem;
+$ham-line-width: 2.5rem;
+$ham-line-space: 0.7rem;
+$ham-line-space-moved: 0.9rem;
+//GRID MARGINS For media queries for example the breakpoint parameter cs variables won't work
+:root{
+    --margin-grid: 6rem;
+}
+
+@include respond (tab-land){
+    :root{
+        --margin-grid: 4rem;
+    }
+}
+
+@include respond (phone){
+    :root{
+        --margin-grid: 2rem;
+    }
+}

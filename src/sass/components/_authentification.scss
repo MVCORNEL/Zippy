@@ -1,0 +1,61 @@
+.authentification {
+    min-height: 100vh;
+    display: flex;
+    
+    &__slider {
+        background-color: $color-primary-4;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 2;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+
+        &-dots {
+            margin-top: 8rem;
+        }
+    }
+    &__form {
+        align-self: center;
+        flex-shrink: 1;
+        flex-basis: 100%;
+    }
+}
+
+.slides{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    max-height: 100%;
+    padding: 2rem;
+    position: absolute;
+    text-align: center;
+    // transition: transform 1s;
+
+    &-img {
+        max-width: 100%;
+    }
+
+    &-header {
+
+    }
+
+    &-text {
+        margin: 0 auto;
+        margin-top: 2rem;
+        max-width: 50ch;
+      
+    }
+}
+

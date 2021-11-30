@@ -1,0 +1,48 @@
+#map {
+    min-height: 40rem;
+    height: 65vh ;
+    z-index: 1;
+    grid-column: full-start/full-end;
+    grid-row: 1/2;
+    position: relative;
+    filter: grayscale(0.9) Brightness(0.7) ;
+}
+
+.map {
+    display: grid;
+    grid-template-columns: [full-start] minmax(var(--margin-grid),1fr) [center-start] minmax(min-content,120rem) [center-end] minmax(var(--margin-grid), 1fr) [full-end];
+    margin-top: minmax(40rem,60vh);
+    
+    &__address {
+        position: relative;
+        z-index: 2;
+        padding: 4rem 6rem;
+        grid-column: center-start/center-end; 
+        grid-row: 1/2;
+        justify-self: end;
+        align-self: start;
+        margin-top: 5rem;
+        margin-right: 10%;
+        background-color: rgba($color-primary-1, 0.7);
+
+
+        &-header{
+            color: $color-white;
+        }
+
+        &-list {
+            list-style: none;
+            &>* {
+                color: white;
+                font-weight: 500;
+                font-size: 2rem;
+    
+            }
+        }
+
+
+       
+    }
+
+
+}

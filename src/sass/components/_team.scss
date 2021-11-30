@@ -1,0 +1,125 @@
+.team {
+    margin-top:15rem;
+    display: grid;
+    grid-template-columns: [full-start] minmax(var(--margin-grid),1fr) [center-start] repeat(4, [col-start] minmax(min-content,30rem) [col-end]) [center-end] minmax(var(--margin-grid), 1fr) [full-end];
+    grid-column: center-start/center-end;
+
+    &__header {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        text-align: center;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 51% 85%, 50% 100%, 49% 85%, 0 85%);
+        background-color: $color-primary;
+        color: white;
+        margin-bottom: 10rem;
+        grid-column: full-start/full-end;
+
+        @include respond(tab-port){
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    &__description {
+        column-count: 2;
+        grid-column: center-start/center-end;
+        margin-bottom: 5rem;
+        text-align: justify;
+
+        @include respond(tab-port) {
+            column-count: 1;
+        }
+
+        &-us {
+            font-family: $font-display;
+            position: relative;
+            float: left;
+            font-weight: 700;
+            font-size: 8rem;
+            margin-right: 2rem;
+        }
+    }
+
+    &__user-list {
+        grid-column: center-start/center-end;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 10rem;
+        
+    }
+
+    &__user {
+        text-align: center;
+        flex: 1 1 33%;
+        margin-bottom: 3rem;
+
+        @include respond(tab-port){
+            flex: 1 1 50%;
+        }
+
+        @include respond(phone){
+            flex: 1 1 100%;
+        }
+
+        &-image {
+            border-radius: 50%;
+            max-width: 18rem;
+            filter: grayscale(85%);
+        }
+    }
+
+    &__characteristics {
+        margin-bottom: 6rem;
+        padding: 2rem;
+        grid-column: col-start 2/col-end 3;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        background-color: $color-background-light;
+
+        & li {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.6rem;
+         
+  
+            font-family: $font-display;
+            letter-spacing: 1px;
+            color: $color-grey-dark-1;
+            list-style: none;
+            flex: 0 0 50%;
+            @include respond(tab-port){
+                flex: 0 0 100%;
+            }
+
+            &::before {
+                content: "";
+                height: 1.5rem;
+                width: 1.5rem;
+                display: inline-block;
+                //OLDER BROWSERS, because the masks work only in older browsers -> color of the icon cannot be changed
+                background-image: url("../img/chevron-thin-right.svg");
+                background-size: cover;
+
+                //FOR NEWER BROWSERS USE MASK -> mask is an are where we can look behing the element and see what is behind that element
+                @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                    background-color: $color-primary;
+                    //mask work now only in webkit browsers
+                    -webkit-mask-image: url("../img/chevron-thin-right.svg");
+                    //because the image is larger than the one rem here
+                    //but with the mask size cover will fix it
+                    -webkit-mask-size: cover;
+                    mask-image: url("../img/chevron-thin-right.svg");
+                    //because the image is larger than the one rem here
+                    //but with the mask size cover will fix it
+                    mask-size: cover;
+                    //REMOVE THE ABCKGROUND IMAGE FROM THE OLDER BROWSER VERSION SUPPORT
+                    background-image: none;
+                }
+            }
+        }
+    }
+}

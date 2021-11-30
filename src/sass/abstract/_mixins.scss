@@ -1,0 +1,57 @@
+// MEDIA QUERIES + breakpoint arguments
+// 0-600px; phone 
+// 600-900px: tab-port
+// 900-1200px: tab-land
+// [1200-1800] is where the current style is applied
+// 1800+: big-desktop
+//ORDER: Base + typography > generalt layout > page layout > components
+@mixin respond($breakpoint) {
+    //We do not use pixel here, because if the user will use the default font size in the browser the media queries won't be affected by that
+    //In media queries EMS and REMS are not affected by a root font size setting  as that in the _base font-size: 62.5%;
+    //In media queries a Rem is always equals to the font size that is coming from the browser = 16px by default ,but if the user changes it it will exactly the changed one, whatever we have in the _base font size definition
+    //EMS best option for media queries
+    @if $breakpoint == phone {
+        @media only screen and (max-width:37.5em) {
+            @content
+        };
+    }
+    //900px
+    @if $breakpoint == tab-port {
+        @media  only screen and (max-width:56.25em) {
+            @content
+        };
+    }
+    //1200px
+    @if $breakpoint == tab-land {
+        @media  only screen and (max-width:75em) {
+            @content
+        };
+    }
+    //1800px
+    @if $breakpoint == big-desktop {
+        @media (min-width:112.5em) {
+            @content
+        };
+    }
+}
+
+@mixin separator{
+    content: "";
+    height: 1px;
+    width: 100%;
+    display: inline-block;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    background-color: $color-grey-dark-4;
+}
+
+@mixin clearfix {
+    &::after {
+        //Clearfix appends a pseudo element, after the element which will clear these floats
+        //we have to specify the content property otherwise the pseudo element will not appear on the page
+        content: "";
+        display: table;
+        //clear both floats, left and right
+        clear: both;
+    }
+}

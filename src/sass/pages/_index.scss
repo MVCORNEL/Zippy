@@ -1,0 +1,42 @@
+.section-seenon {
+    margin-top: 10rem;
+    grid-column: full-start/full-end;
+    margin-bottom: 15rem;
+
+}
+
+.section-features {
+
+    grid-column: center-start/center-end;
+
+    &::after {
+        @include separator;
+    }
+
+}
+
+.section-about-us {
+    grid-column: center-start/center-end;
+
+    &::after {
+        @include separator;
+    }
+}
+
+.section-training {
+    grid-column: center-start / center-end;
+
+    &::after {
+        @include separator;
+    }
+}
+
+.section-reviews {
+    grid-column: full-start / full-end;
+
+    & .heading-secondary {
+        grid-column: full-start/full-end;
+    }
+
+
+}

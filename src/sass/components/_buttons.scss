@@ -1,0 +1,101 @@
+.btn {
+
+    &,
+    // Form button do not have link and visited state
+    &:link,
+    &:visited {
+        border: none;
+        font-size: 1.9rem;
+        font-weight: 700;
+        text-decoration: none;
+        //for height,width,padding and margin top-bottom. that are not allowed in line elements
+        display: inline-block;
+        background-color: $color-primary;
+        padding: 1.4rem 4rem;
+        color: $color-white;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all .2s;
+    }
+
+    &:hover {
+        box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+        transform: translateY(-.3rem);
+    }
+
+    &:active,
+    &:focus {
+        //FORM BUTTON focus on form button looks exactly as the active does {
+        outline: none; //FORM BUTTON -> focus
+        transform: translateY(-.1rem);
+        //box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    }
+
+
+    &--gig {
+        font-size: 1.4rem;
+        background-color: $color-white;
+        border: 1px solid $color-grey-dark-2;
+        color: $color-grey-dark-2;
+        padding: 1rem 2rem;
+
+        &:hover {
+            border: 1px solid $color-white;
+            box-shadow: none;
+            transform: none;
+            background-color: $color-primary;
+            color: $color-white;
+        }
+
+
+    }
+
+    //GOOGLE PLAY AND APP STORE
+    &-app {
+        height: 5rem;
+        width: auto;
+        padding: 0;
+    }
+
+    //ARROW
+    &-arrow {
+        background: none;
+        border: none;
+        align-self: center;
+        font-size: 5rem;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all 1s;
+        color: $color-grey-dark-3;
+
+        &--active {
+            color: $color-primary;
+        }
+
+    }
+
+}
+
+.btn-text {
+
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        padding: 3px;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    &:hover {
+        color: $color-primary;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+}

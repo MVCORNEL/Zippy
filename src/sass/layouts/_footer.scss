@@ -1,0 +1,88 @@
+.footer {
+ 
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: [full-start] minmax(var(--margin-grid), 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 60rem)[col-end]) [center-end] minmax(var(--margin-grid), 1fr) [full-end];
+    row-gap: 2rem;
+    background-color: $color-background-light;
+
+    padding-top: 4rem;
+    &__media {
+        grid-column: col-start 1 / col-start 2;
+
+        &-logo {
+            max-height: 3rem;
+        }
+
+        &-icon {
+            margin-top: 2rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-block;
+            fill: $color-primary;
+        }
+
+    }
+
+    &__lists {
+        grid-column: col-start 2 / center-end;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__list {
+        list-style-type: none;
+
+        &-heading {
+            color: $color-black;
+            font-family: $font-display;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    &__copyright {
+        grid-column: full-start/full-end;
+        grid-row: 2/3;
+        background-color: $color-primary;
+        display: grid;
+        grid-template-columns: [full-start] minmax(var(--margin-grid), 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 60rem)[col-end]) [center-end] minmax(var(--margin-grid), 1fr) [full-end];
+
+        &>* {
+            padding: 2rem 0;
+            color: white;
+        }
+
+        &-copy {
+            grid-column: col-start 1/col-end 1;
+            justify-self: left;
+        }
+
+        &-terms {
+            grid-column: col-start 2/col-end 2;
+            justify-self: right;
+        }
+    }
+
+    @include respond(tab-port){
+        & > *:not(:last-child){
+            margin-bottom: 3rem;
+
+        }
+        &__lists {
+            grid-column: center-start  / center-end;
+            grid-row: 1/2;
+            justify-content: space-between;
+        }
+
+        &__media{
+            grid-row: 2/3;
+            grid-column: center-start  / center-end;
+        }
+
+        &__copyright{
+            grid-row: 3/4;
+        }
+    }
+
+}

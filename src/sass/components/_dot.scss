@@ -1,0 +1,26 @@
+
+.dot {
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.12);
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-right: 2rem;
+
+    &--active {
+        background-color: $color-primary;
+    }
+
+    &--active-white {
+        background-color: $color-primary-2;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+
+}
+

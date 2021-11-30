@@ -1,0 +1,29 @@
+.section-menu{
+    margin-top: 4rem;
+    grid-column: full-start  /full-end ;
+    display: grid;
+}
+
+.section-filter{
+    grid-column: col-start 1 /col-start 2;
+    min-width: 25rem;
+    @include respond(tab-port){
+        grid-column: center-start  /center-end ;
+      
+    }
+}
+
+.section-gigs{
+    padding:3rem;
+    background-color:white;
+    margin-left: 4rem;
+    border: 1px solid $color-grey-dark-4;
+    grid-column: col-start 2/ col-end 4;
+    margin-bottom: 15rem;
+    @include respond(tab-port){
+        margin-top: 3rem;
+        grid-column: center-start  /center-end ;
+        margin-left: 0;
+      
+    }
+}

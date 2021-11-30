@@ -1,0 +1,10 @@
+.section-credit {
+    grid-column: center-start/center-end;
+}
+
+.credit-icons {
+    & svg {
+        width: 5rem;
+        height: 5rem;
+    }
+}

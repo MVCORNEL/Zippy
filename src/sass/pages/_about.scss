@@ -1,0 +1,22 @@
+.section-header-about{
+    grid-column: center-start/center-end;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+
+    @include respond(tab-land){
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+}
+
+.section-team{
+    grid-column: full-start/full-end;
+    margin-bottom: 10rem;
+
+}
+
+.section-topics{
+    grid-column: center-start/center-end;
+
+}

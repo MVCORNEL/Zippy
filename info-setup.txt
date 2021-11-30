@@ -1,0 +1,88 @@
+
+NPM -> PARCEL->BABEL/SASS
+
+1) npm install -> install npm
+   npm -v -> check version
+   npm init -> create package.json ->
+
+change the following 
+
+2) npm i parcel -D -> install the latest version of parcel available on npm for transpilte the code
+
+"main": "index.html",
+"scripts": {
+    "start:parcel": "parcel index.html",
+    "build:parcel": "parcel build index.html --dist-dir ./dist",
+}
+
+   npm i core-js //polyfilling everything after E6 -> not features in proposal
+   //npm i 'regenerator-rutime/runtime' //polyfilling async/await didnt work thenext worked
+   npm install --save regenerator-runtime //because the 
+   import 'core-js/stable';
+   import 'regenerator-runtime/runtime'; 
+
+
+3) npm install node-sass --save-dev
+"scripts": {
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.css"
+}
+
+4) npm install live-server -g -> install ls globally in the computer run liveserver by using live-server command in cmd
+
+    "scripts": {
+        "dev:server": "live-server";
+    }
+
+
+5) npm install npm-run-all --save-dev //with this tool will be able to run npm task in parallel, into a single step
+//start will compile css, and parcel js and also open ls connection
+"scripts": {
+    "start:parcel": "parcel index.html",
+    "build:parcel": "parcel build index.html --dist-dir ./dist",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.css",
+    "dev:server": "live-server",
+    "start": "npm-run-all --parallel start:parcel watch:sass dev:server"
+    }
+}
+
+ GIT
+
+1) git init  -> initialize git into the main folder
+   git config --global user.name xxxxx
+   git config --global email.name xxxxx@gmail.com
+
+   //GIT Commands
+   git status -> check untracked files(U comes from untracked), staged files(A comes from added/staged)
+   git add -A -> add all files to the staging area
+   
+   //Commits
+   git log -> log all the commits that you did -> TYPE Q FROOM QUIT TO GET OUT OF THE LOG
+   git commit -m 'Initial commit!' -> commit all the staged files
+   git reset --hard HEAD -> RETURN TO THE PREVIOUS COMMIT -> HARD MEANS DELETE ALL CHANGES and FOLDERS
+   git reset --hard <commit ID> -> without <>
+
+   //Branch
+   git branch -> list all the branches
+   git branch new-feature -> create a new branch
+   git checkout new-feature -> switch to the new branch
+   git checkout master -> switch to master branch
+
+   //Merge branches
+   git merge new-feature -> merge the master branch with the new-feature branch
+
+   //Let the github repo know about the local repo 
+   git remote add origin ######
+
+   //Push to the remote branch named origins -> remote branch is called origins -> and the name of the branch we want to push is master
+   git push origin master
+   //Push the new feature branch to the repo aswell
+   git push origin new-feature  
+
+    //Pull request download a proiect
+    git pull
+
+
+   //create README.md file to write information about the project
+   

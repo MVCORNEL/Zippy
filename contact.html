@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/js/controllers/controller.js"></script>
+    <title>Zippy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- <link rel="stylesheet" href="src/sass/style.scss"> -->
+  </head>
+
+  <body id="contact" class="grid-container">
+    <nav class="nav">
+      <ul class="nav__menu">
+        <li class="nav__logo"><img src="src/img/logo.png" alt="logo" class="logo" /></li>
+        <li class="nav__link"><a href="index.html" class="nav__link-link">Home</a></li>
+        <li class="nav__link"><a href="jobify.html" class="nav__link-link">Jobify</a></li>
+        <li class="nav__link"><a href="about.html" class="nav__link-link">About</a></li>
+        <li class="nav__link"><a href="#" class="nav__link-link nav__link-link--current">Contact</a></li>
+
+        <li class="nav__user">
+          <a href="authentification.html" class="nav__user-btn btn">Login</a>
+          <!-- <div class="user">
+                    <div class="user__notification">
+                        <svg class="user__notification-icon">
+                            <use xlink:href="src/img/sprite.svg#icon-chat">
+                        </svg>
+                        <span class="user__notification-bubble">7</span>
+                    </div>
+
+                    <div class="user__notification">
+                        <svg class="user__notification-icon">
+                            <use xlink:href="src/img/sprite.svg#icon-bookmark">
+                        </svg>
+                        <span class="user__notification-bubble">7</span>
+                    </div>
+
+                    <img class="user__image" src="src/img/user.jpg" alt="image founder ISK">
+                </div> -->
+        </li>
+        <li class="nav__hamburger">
+          <div class="hamburger">
+            <input type="checkbox" class="hamburger__cb" id="hamburger__cb" />
+            <label for="hamburger__cb" class="hamburger__button"><span class="hamburger__icon"></span></label>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="header header--contact">
+      <div class="map">
+        <div id="map"></div>
+        <div class="map__address">
+          <!-- <span class="heading-quertenary">Looking for work ?</span> -->
+          <h1 class="map__address-header heading-primary">London office</h1>
+
+          <ul class="map__address-list">
+            <li>152 Chobham Road</li>
+            <li>Stratford E151LZ</li>
+            <li>020 xxxx xxxx</li>
+            <li>Open by appointment only</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-contact">
+      <h2 class="heading-secondary u-center u-margin-bottom-very-big">Our team is ready to hear from you.</h2>
+      <div class="contact">
+        <div class="contact__form">
+          <h3 class="heading-tertiary u-margin-bottom-medium">Reach out to us</h3>
+          <form class="form form--contact" name="form-contact" id="form-contact">
+            <div class="form__control">
+              <input class="form__input" type="text" name="fname" id="fname" placeholder="First name" />
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--correct">
+                <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
+              </svg>
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--incorrect">
+                <use xlink:href="src/img/sprite.svg#icon-notice"></use>
+              </svg>
+              <small class="form__input-msg">Error message</small>
+            </div>
+
+            <div class="form__control">
+              <input class="form__input" type="text" name="lname" id="lname" placeholder="Last name" />
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--correct">
+                <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
+              </svg>
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--incorrect">
+                <use xlink:href="src/img/sprite.svg#icon-notice"></use>
+              </svg>
+              <small class="form__input-msg">Error message</small>
+            </div>
+
+            <div class="form__control">
+              <input class="form__input" type="text" name="email" placeholder="Email" id="email" />
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--correct">
+                <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
+              </svg>
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--incorrect">
+                <use xlink:href="src/img/sprite.svg#icon-notice"></use>
+              </svg>
+              <small class="form__input-msg">Error message</small>
+            </div>
+
+            <div class="form__control">
+              <input class="form__input" type="text" name="phone" id="phone" placeholder="Phone Number" />
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--correct">
+                <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
+              </svg>
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--incorrect">
+                <use xlink:href="src/img/sprite.svg#icon-notice"></use>
+              </svg>
+              <small class="form__input-msg">Error message</small>
+            </div>
+
+            <div class="form__control">
+              <textarea
+                class="form__input"
+                placeholder="Message"
+                maxlength="300"
+                id="message"
+                rows="5"
+                cols="35"
+              ></textarea>
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--correct">
+                <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
+              </svg>
+              <svg class="form__input-icon form__input-icon--contact form__input-icon--incorrect">
+                <use xlink:href="src/img/sprite.svg#icon-notice"></use>
+              </svg>
+              <small class="form__input-msg">Error message</small>
+            </div>
+
+            <div class="form__control">
+              <input class="form__submit btn" type="submit" name="submit" id="submit" value="Sumbit" />
+            </div>
+          </form>
+        </div>
+
+        <div class="contact__info">
+          <h3 class="contact__info-header heading-tertiary u-margin-bottom-medium">Contact Information</h3>
+          <ul class="contact__info-list">
+            <li class="contact__info-element">
+              <svg class="contact__info-icon">
+                <use xlink:href="src/img/sprite.svg#icon-phone"></use>
+              </svg>
+              <span class="contact__info-txt">074 xxxx xxxx</span>
+            </li>
+            <li class="contact__info-element">
+              <svg class="contact__info-icon">
+                <use xlink:href="src/img/sprite.svg#icon-envelope"></use>
+              </svg>
+              <span class="contact__info-txt">zippi_do@gmail.com</span>
+            </li>
+            <li class="contact__info-element">
+              <svg class="contact__info-icon">
+                <use xlink:href="src/img/sprite.svg#icon-fax"></use>
+              </svg>
+              <span class="contact__info-txt">EC66 4523 23354</span>
+            </li>
+            <li class="contact__info-element">
+              <svg class="contact__info-icon">
+                <use xlink:href="src/img/sprite.svg#icon-library"></use>
+              </svg>
+              <span class="contact__info-txt">E152LZ Chobham Road</span>
+            </li>
+          </ul>
+
+          <div class="contact__info-media">
+            <svg class="contact__info-media-icon">
+              <use xlink:href="src/img/sprite.svg#icon-facebook-with-circle"></use>
+            </svg>
+
+            <svg class="contact__info-media-icon">
+              <use xlink:href="src/img/sprite.svg#icon-github-with-circle"></use>
+            </svg>
+
+            <svg class="contact__info-media-icon">
+              <use xlink:href="src/img/sprite.svg#icon-instagram-with-circle"></use>
+            </svg>
+
+            <svg class="contact__info-media-icon">
+              <use xlink:href="src/img/sprite.svg#icon-twitter-with-circle"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__media">
+        <img class="logo footer__media-logo" src="src/img/logo.png" alt="logo" />
+        <p class="footer__media-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sunt laudantium doloribus ut enim ea nisi labore!
+          Commodi, laboriosam omnis.
+        </p>
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-facebook-with-circle"></use>
+        </svg>
+
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-github-with-circle"></use>
+        </svg>
+
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-instagram-with-circle"></use>
+        </svg>
+
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-twitter-with-circle"></use>
+        </svg>
+      </div>
+
+      <div class="footer__lists">
+        <ul class="footer__list footer__list--about">
+          <li class="footer__list-heading">About</li>
+          <li>About us</li>
+          <li>Services</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li><a class="footer__link" href="credits.html">Credits</a></li>
+        </ul>
+
+        <ul class="footer__list footer__list--company">
+          <li class="footer__list-heading">Company</li>
+          <li>Out Team</li>
+          <li>FAQ</li>
+        </ul>
+
+        <ul class="footer__list footer__list--support">
+          <li class="footer__list-heading">Support</li>
+          <li>Account</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
+
+      <div class="footer__copyright">
+        <p class="footer__copyright-copy">&copy; Copyright 2021 by Manea Valentin Cornel.</p>
+        <p class="footer__copyright-terms">Privacy Policy & Terms of use</p>
+      </div>
+    </footer>
+  </body>
+</html>

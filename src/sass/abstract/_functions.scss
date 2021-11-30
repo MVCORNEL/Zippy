@@ -1,0 +1,3 @@
+@function calcHamburgerHeight($height,$space){
+    @return  ($height+$space) * 2 ;
+ }
