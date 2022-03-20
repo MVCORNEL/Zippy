@@ -1,147 +1,134 @@
 .nav {
-    grid-column: full-start/full-end;
-    display: grid;
-    grid-template-columns: [full-start] minmax(var(--margin-grid),1fr) [center-start] minmax(min-content,120rem) [center-end] minmax(var(--margin-grid), 1fr) [full-end];
-    z-index: 100000;
-    position: relative;
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--margin-grid), 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(
+      var(--margin-grid),
+      1fr
+    )
+    [full-end];
+  z-index: 100000;
+  position: relative;
 
+  &__menu {
+    grid-column: center-start/center-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 
-    &__menu {
-        grid-column: center-start/center-end;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-
-        &>* {
-            padding: 1.5rem 2rem 1.5rem 2rem;
-            list-style-type: none;
-        }
+    & > * {
+      padding: 1.5rem 2rem 1.5rem 2rem;
+      list-style-type: none;
     }
+  }
 
-    &__logo {
-        padding: 0;
-        margin-right: auto;
+  &__logo {
+    padding: 0;
+    margin-right: auto;
+  }
+
+  &__user {
+    padding-right: 0;
+    margin-left: auto;
+  }
+
+  &__hamburger {
+    padding-right: 0;
+    display: none;
+  }
+
+  &__link {
+    &-link {
+      &--current {
+        animation: pulsate 5s infinite;
+      }
+
+      &:link,
+      &:visited {
+        color: $color-grey-dark-1;
+        font-size: 2.3rem;
+        font-weight: 700;
+        text-decoration: none;
+        position: relative;
+      }
+
+      &:hover::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 40px;
+        background-color: $color-primary;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
+  }
 
-    &__user {
-        padding-right: 0;
-        margin-left: auto;
+  //LAND TAB
+  @include respond(tab-land) {
+    &__hamburger {
+      display: none;
+    }
+  }
+
+  //PORTRAIT RAB
+  @include respond(tab-port) {
+    // padding: 0 1rem 0 1rem;
+    &__link {
+      color: $color-grey-dark-1;
+      display: none;
+      width: 100%;
+      order: 2;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
     }
 
     &__hamburger {
-        padding-right: 0;
-        display: none;
+      display: block;
     }
 
-    &__link {
-
-        &-link {
-            &--current::after{
-                content: "";
-                display: block;
-                height: 2px;
-                width: 40px;
-                background-color: $color-primary;
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%);
-        
-            }
-
-
-            &--pulsate{
-                animation: pulsate 12s infinite;
-            }
-            &:link,
-            &:visited {
-                color: $color-grey-dark-1;
-                font-size: 2.2rem;
-                font-weight: 600;
-                text-decoration: none;
-                position: relative;
-            }
-
-            &:hover {
-                color: $color-primary-2 !important; 
-                // content: "";
-                // display: block;
-                // height: 2px;
-                // width: 40px;
-                // background-color: $color-primary;
-                // position: absolute;
-                // left: 50%;
-                // transform: translate(-50%);
-            }
-        }
+    //line will expand on hover
+    &__link::before {
+      background-color: $color-primary;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      transform: scaleY(0);
+      // the third parameter of width is the delay so the width transformation will start after .2s
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
     }
 
-    //LAND TAB
-    @include respond(tab-land) {
-        &__hamburger {
-            display: none;
-        }
+    &__link:hover::before {
+      transform: scaleY(1);
+      width: 100%;
     }
 
-    //PORTRAIT RAB
-    @include respond(tab-port) {
-
-        // padding: 0 1rem 0 1rem;
-        &__link {
-            color: $color-grey-dark-1;
-            display: none;
-            width: 100%;
-            order: 2;
-            text-align: center;
-            padding: 1rem;
-            position: relative;
-        }
-
-        &__hamburger {
-            display: block;
-        }
-
-        //line will expand on hover
-        &__link::before {
-            background-color: $color-primary;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 3px;
-            transform: scaleY(0);
-            // the third parameter of width is the delay so the width transformation will start after .2s
-            transition: transform .2s,
-                width .4s cubic-bezier(1, 0, 0, 1) .2s,
-                background-color .1s;
-        }
-
-        &__link:hover::before {
-            transform: scaleY(1);
-            width: 100%;
-        }
-
-        &__link:active::before {
-            background-color: brown;
-        }
+    &__link:active::before {
+      background-color: brown;
     }
+  }
 
-    //PHONE
-    @include respond(phone) {
-        &__hamburger {
-            display: block;
-        }
+  //PHONE
+  @include respond(phone) {
+    &__hamburger {
+      display: block;
     }
+  }
 }
 
 .active {
-    display: inline-block;
+  display: inline-block;
 }
 
-.sticky{
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.95);
-    width: 100%;
-    top: 0;
+.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  top: 0;
 }

@@ -1,17 +1,13 @@
 @keyframes pulsate {
-    0% {
-       
-     
-    }
+  0% {
+    color: $color-primary;
+  }
 
-    50% {
-        color: $color-primary
-     
-    }
+  50% {
+    color: $color-primary-2;
+  }
 
-    100% {
-
-
-    }
-
+  100% {
+    color: $color-primary;
+  }
 }

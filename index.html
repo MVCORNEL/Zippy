@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zippy</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css" />
     <!-- <link rel="stylesheet" href="src/sass/style.scss"> -->
     <!--module script defer by default-->
     <script type="module" src="src/js/controllers/controller.js"></script>
-</head>
+  </head>
 
-<body id="index" class="grid-container">
+  <body id="index" class="grid-container">
     <nav class="nav">
-        <ul class="nav__menu">
-            <li class="nav__logo"><img src="src/img/logo.png" alt="logo" class="logo"></li>
+      <ul class="nav__menu">
+        <li class="nav__logo"><img src="src/img/logo.png" alt="logo" class="logo" /></li>
 
+        <li class="nav__link"><a href="#" class="nav__link-link nav__link-link--current">Home</a></li>
+        <li class="nav__link"><a href="jobify.html" class="nav__link-link">Jobify</a></li>
+        <li class="nav__link"><a href="about.html" class="nav__link-link">About</a></li>
+        <li class="nav__link"><a href="contact.html" class="nav__link-link">Contact</a></li>
 
-            <li class="nav__link"><a href="#" class="nav__link-link nav__link-link--current">Home</a></li>
-            <li class="nav__link"><a href="jobify.html" class="nav__link-link nav__link-link--pulsate">Jobify</a></li>
-            <li class="nav__link"><a href="about.html" class="nav__link-link">About</a></li>
-            <li class="nav__link"><a href="contact.html" class="nav__link-link">Contact</a></li>
-
-            <li class=" nav__user">
-                <a href="authentification.html" target="_blank" class="nav__user-btn btn">Login</a>
-                <!-- <div class="user">
+        <li class="nav__user">
+          <a href="authentification.html" target="_blank" class="nav__user-btn btn">Login</a>
+          <!-- <div class="user">
                     <div class="user__notification">
                         <svg class="user__notification-icon">
                             <use xlink:href="src/img/sprite.svg#icon-chat">
@@ -49,251 +48,269 @@
 
                     <img class="user__image" src="src/img/user.jpg" alt="image founder ISK">
                 </div> -->
-            </li>
+        </li>
 
-            <li class="nav__hamburger">
-                <div class="hamburger">
-                    <input type="checkbox" class="hamburger__cb" id="hamburger__cb">
-                    <label for="hamburger__cb" class="hamburger__button"><span class="hamburger__icon"></span></label>
-                </div>
-            </li>
-
-        </ul>
+        <li class="nav__hamburger">
+          <div class="hamburger">
+            <input type="checkbox" class="hamburger__cb" id="hamburger__cb" />
+            <label for="hamburger__cb" class="hamburger__button"><span class="hamburger__icon"></span></label>
+          </div>
+        </li>
+      </ul>
     </nav>
 
     <header class="header">
-        <div class="header__box">
-            <div class=" header__info">
-                <!-- <span class="heading-quertenary">Looking for work ?</span> -->
-                <h1 class="heading-primary">Uk's largest agency for hospitality jobs!</h1>
-                <p class="header__info-text text-important">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Perferendis sunt a
-                    repudiandae
-                    possimus, ipsam ab doloribus alias autem nostrum quod, libero illum ipsum, ex voluptates tenetur.
-                    Deserunt
-                    adipisci eligendi voluptas!</p>
-                <button class="header__info--apply btn btn--yellow">Apply Now</button>
-            </div>
-
-            <div class="header__hero">
-                <div class="header__hero-gradient">
-                    <!--DENSITY SWITCHING srcset in case the browser is old and doesn't understand, but will be ignored in case the browser udnerstand the srcset-->
-                    <img srcset="src/img/hero-1x.png 1x, src/img/hero-2x.png 2x" alt="worker image"
-                        class="header__hero-image" src="src/img/hero-2x.png" />
-                </div>
-            </div>
+      <div class="header__box">
+        <div class="header__info">
+          <!-- <span class="heading-quertenary">Looking for work ?</span> -->
+          <h1 class="heading-primary">Uk's largest agency for hospitality jobs!</h1>
+          <p class="header__info-text text-important">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt a repudiandae possimus, ipsam ab
+            doloribus alias autem nostrum quod, libero illum ipsum, ex voluptates tenetur. Deserunt adipisci eligendi
+            voluptas!
+          </p>
+          <button class="header__info--apply btn btn--yellow">Apply Now</button>
         </div>
 
-        <div class="header__achievement">
-            <div>
-                <h3 class="header__achievement-number">2000+</h3>
-                <div class="header__achievement-text">Workers</div>
-            </div>
-
-            <div>
-                <h3 class="header__achievement-number">50+</h3>
-                <div class="header__achievement-text">Happy clients</div>
-            </div>
+        <div class="header__hero">
+          <div class="header__hero-gradient">
+            <!--DENSITY SWITCHING srcset in case the browser is old and doesn't understand, but will be ignored in case the browser udnerstand the srcset-->
+            <img
+              srcset="src/img/hero-1x.png 1x, src/img/hero-2x.png 2x"
+              alt="worker image"
+              class="header__hero-image"
+              src="src/img/hero-2x.png"
+            />
+          </div>
         </div>
+      </div>
+
+      <div class="header__achievement">
+        <div>
+          <h3 class="header__achievement-number">2000+</h3>
+          <div class="header__achievement-text">Workers</div>
+        </div>
+
+        <div>
+          <h3 class="header__achievement-number">50+</h3>
+          <div class="header__achievement-text">Happy clients</div>
+        </div>
+      </div>
     </header>
 
     <section class="section-seenon">
-        <div class="seenon">
-            <h2 class="seenon__clients">Clients</h2>
-            <img class="seenon__logo" src="src/img/seenon-1.png" alt="Seen on 1">
-            <img class="seenon__logo" src="src/img/seenon-2.png" alt="Seen on 2">
-            <img class="seenon__logo" src="src/img/seenon-3.png" alt="Seen on 3">
-            <img class="seenon__logo" src="src/img/seenon-4.png" alt="Seen on 4">
-            <img class="seenon__logo" src="src/img/seenon-5.png" alt="Seen on 5">
-        </div>
+      <div class="seenon">
+        <h2 class="seenon__clients">Clients</h2>
+        <img class="seenon__logo" src="src/img/seenon-1.png" alt="Seen on 1" />
+        <img class="seenon__logo" src="src/img/seenon-2.png" alt="Seen on 2" />
+        <img class="seenon__logo" src="src/img/seenon-3.png" alt="Seen on 3" />
+        <img class="seenon__logo" src="src/img/seenon-4.png" alt="Seen on 4" />
+        <img class="seenon__logo" src="src/img/seenon-5.png" alt="Seen on 5" />
+      </div>
     </section>
 
     <section class="section-features">
-        <!-- <h2 class="heading-secondary u-center u-margin-bottom-big">Why us? </h2> -->
-        <div class="features">
-
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="src/img/sprite.svg#icon-globe"></use>
-                </svg>
-                <span class="feature__title">All over UK</span>
-                <p class="feature__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ea itaque
-                    eveniet dicta modi aut, optio perferendis adipisci, velit ipsum, nostrum incidunt.<span
-                        class="feature__learn-more"> Learn more! </span></p>
-            </div>
-
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="src/img/sprite.svg#icon-medal"></use>
-                </svg>
-                <span class="feature__title">High stantards</span>
-                <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veritatis in
-                    expedita fuga voluptatem nobis distinctio perferendis sapiente qui velit.<span
-                        class="feature__learn-more"> Learn more! </span> </p>
-            </div>
-
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="src/img/sprite.svg#icon-chronometer"></use>
-                </svg>
-                <span class="feature__title">Flexible shifts</span>
-                <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores
-                    maxime, aperiam adipisci eaque laborum nemo fugiat blanditiis dolore impedit molestias error!<span
-                        class="feature__learn-more"> Learn more! </span></p>
-            </div>
-
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="src/img/sprite.svg#icon-clipboard"></use>
-                </svg>
-                <span class="feature__title">Weekly Paymetns</span>
-                <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias earum
-                    temporibus nesciunt nobis porro magnam quaerat similique quod, ipsam obcaecati minusa. <span
-                        class="feature__learn-more"> Learn more! </span></p>
-            </div>
+      <!-- <h2 class="heading-secondary u-center u-margin-bottom-big">Why us? </h2> -->
+      <div class="features">
+        <div class="feature">
+          <svg class="feature__icon">
+            <use xlink:href="src/img/sprite.svg#icon-globe"></use>
+          </svg>
+          <span class="feature__title">All over UK</span>
+          <p class="feature__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ea itaque eveniet dicta modi aut, optio
+            perferendis adipisci, velit ipsum, nostrum incidunt.<span class="feature__learn-more"> Learn more! </span>
+          </p>
         </div>
+
+        <div class="feature">
+          <svg class="feature__icon">
+            <use xlink:href="src/img/sprite.svg#icon-medal"></use>
+          </svg>
+          <span class="feature__title">High stantards</span>
+          <p class="feature__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veritatis in expedita fuga voluptatem nobis
+            distinctio perferendis sapiente qui velit.<span class="feature__learn-more"> Learn more! </span>
+          </p>
+        </div>
+
+        <div class="feature">
+          <svg class="feature__icon">
+            <use xlink:href="src/img/sprite.svg#icon-chronometer"></use>
+          </svg>
+          <span class="feature__title">Flexible shifts</span>
+          <p class="feature__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores maxime, aperiam adipisci eaque
+            laborum nemo fugiat blanditiis dolore impedit molestias error!<span class="feature__learn-more">
+              Learn more!
+            </span>
+          </p>
+        </div>
+
+        <div class="feature">
+          <svg class="feature__icon">
+            <use xlink:href="src/img/sprite.svg#icon-clipboard"></use>
+          </svg>
+          <span class="feature__title">Weekly Paymetns</span>
+          <p class="feature__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias earum temporibus nesciunt nobis porro
+            magnam quaerat similique quod, ipsam obcaecati minusa.
+            <span class="feature__learn-more"> Learn more! </span>
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="section-about-us">
-        <div class="about">
+      <div class="about">
+        <div class="about__box">
+          <!-- <span class="heading-quertenary ">How does it work?</span> -->
+          <h2 class="heading-secondary about__heading">Install out application and choose where you want to work!</h2>
 
-            <div class="about__box">
-                <!-- <span class="heading-quertenary ">How does it work?</span> -->
-                <h2 class="heading-secondary about__heading">Install out application and choose where you want
-                    to work!</h2>
+          <!--DESINITY SWITCHING + RESOLUTION SWITCHING-->
+          <!--This method takes care of both density and resolution switching-->
+          <!--W Inform the browser the width of the images without downloading them-->
+          <!--sizes inform the browser by approximatively width of image at different viewport width, the last size is the default size -->
+          <!-- the last attribute is used in case the user uses an olde rbrowser that doesn't support srcset or size -->
 
-                <!--DESINITY SWITCHING + RESOLUTION SWITCHING-->
-                <!--This method takes care of both density and resolution switching-->
-                <!--W Inform the browser the width of the images without downloading them-->
-                <!--sizes inform the browser by approximatively width of image at different viewport width, the last size is the default size -->
-                <!-- the last attribute is used in case the user uses an olde rbrowser that doesn't support srcset or size -->
+          <img
+            srcset="src/img/phone.png 150w, src/img/phone-big.png 600w"
+            sizes="(max-width: 900px) 23vw, (max-width:600px) 24vw, 300px "
+            class="about__image about__image--phone"
+            src="src/img/phone-big.png"
+            alt="phone image"
+          />
 
-                <img srcset="src/img/phone.png 150w, src/img/phone-big.png 600w"
-                    sizes="(max-width: 900px) 23vw, (max-width:600px) 24vw, 300px "
-                    class="about__image about__image--phone" src="src/img/phone-big.png" alt="phone image">
+          <div class="about__feature">
+            <svg class="about__feature-icon">
+              <use xlink:href="src/img/sprite.svg#icon-number1"></use>
+            </svg>
+            <h3 class="about__feature-title heading-tertiary">Elit sed diam nonummy nibh euismod</h3>
+            <p class="about__feature-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt praesentium quam molestiae ut pariatur
+              quos, soluta consequuntur consectetur quis non porro dignissimos mollitia delectus eos.
+            </p>
+          </div>
 
+          <div class="about__feature">
+            <svg class="about__feature-icon">
+              <use xlink:href="src/img/sprite.svg#icon-number2 "></use>
+            </svg>
+            <h3 class="about__feature-title heading-tertiary">Soluta nobis eleifend option</h3>
+            <p class="about__feature-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum nostrum consectetur eveniet magni atque
+              repudiandae eligendi ex sequi hic ab, id odio facere praesentium dolor nemo at et incidunt beatae.
+            </p>
+          </div>
 
-                <div class="about__feature">
-                    <svg class="about__feature-icon">
-                        <use xlink:href="src/img/sprite.svg#icon-number1"></use>
-                    </svg>
-                    <h3 class="about__feature-title heading-tertiary">Elit sed diam nonummy nibh euismod</h3>
-                    <p class="about__feature-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
-                        praesentium quam molestiae ut pariatur quos, soluta consequuntur consectetur quis non porro
-                        dignissimos mollitia delectus eos.</p>
-                </div>
+          <div class="about__feature">
+            <svg class="about__feature-icon">
+              <use xlink:href="src/img/sprite.svg#icon-number3"></use>
+            </svg>
+            <h3 class="about__feature-title heading-tertiary">Mirum est notare quam littera</h3>
+            <p class="about__feature-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam commodi dolores quidem nostrum similique
+              ad, aspernatur, ipsum, ex pariatur beatae accusantium facilis libero.
+            </p>
+          </div>
 
-                <div class="about__feature">
-                    <svg class="about__feature-icon">
-                        <use xlink:href="src/img/sprite.svg#icon-number2 "></use>
-                    </svg>
-                    <h3 class="about__feature-title heading-tertiary"> Soluta nobis eleifend option</h3>
-                    <p class="about__feature-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-                        nostrum consectetur eveniet magni atque repudiandae eligendi ex sequi hic ab, id odio facere
-                        praesentium dolor nemo at et incidunt beatae.</p>
-                </div>
-
-                <div class="about__feature">
-                    <svg class="about__feature-icon">
-                        <use xlink:href="src/img/sprite.svg#icon-number3"></use>
-                    </svg>
-                    <h3 class="about__feature-title heading-tertiary">Mirum est notare quam littera</h3>
-                    <p class="about__feature-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
-                        commodi dolores quidem nostrum similique ad, aspernatur, ipsum, ex pariatur beatae
-                        accusantium facilis libero.</p>
-                </div>
-
-                <div class="about__btns">
-                    <a class="about__btn"> <img src="src/img/apple-store-badge.svg" alt="App Store Button"
-                            class="btn-app">
-                    </a>
-                    <a class="about__btn"> <img src="src/img/google-play-badge.png" alt="Play Store Button"
-                            class="btn-app">
-                    </a>
-                </div>
-            </div>
-
-            <div class="about__box">
-
-                <h2 class="heading-secondary about__heading">Book your staff with one click !!</h2>
-
-                <img srcset="src/img/laptop.png 400w, src/img/laptop-big.png 900w"
-                sizes="(max-width: 900px) 32vw,(max-width: 600px) 47vw, 450px"
-                class="about__image about__image--laptop"
-                alt="laptop"
-                src="src/img/laptop-big.png">
-
-                <div class="about__feature">
-                    <svg class="about__feature-icon">
-                        <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
-                    </svg>
-                    <h3 class="about__feature-title heading-tertiary">Claritas est etiam processus dynamicus</h3>
-                    <p class="about__feature-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusantium architecto amet, distinctio laboriosam corporis quibusdam quas eius soluta.
-                        Asperiores ipsa aliquid ducimus quod nesciunt ipsam.</p>
-                </div>
-
-                <div class="about__feature">
-                    <svg class="about__feature-icon">
-                        <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
-                    </svg>
-                    <h3 class="about__feature-title heading-tertiary"> Litterarum formas humanitatis per</h3>
-                    <p class="about__feature-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-                        nostrum consectetur eveniet magni atque repudiandae eligendi ex sequi hic ab, id odio facere
-                        praesentium dolor nemo at et incidunt beatae.</p>
-                </div>
-            </div>
-
+          <div class="about__btns">
+            <a class="about__btn">
+              <img src="src/img/apple-store-badge.svg" alt="App Store Button" class="btn-app" />
+            </a>
+            <a class="about__btn">
+              <img src="src/img/google-play-badge.png" alt="Play Store Button" class="btn-app" />
+            </a>
+          </div>
         </div>
+
+        <div class="about__box">
+          <h2 class="heading-secondary about__heading">Book your staff with one click !!</h2>
+
+          <img
+            srcset="src/img/laptop.png 400w, src/img/laptop-big.png 900w"
+            sizes="(max-width: 900px) 32vw,(max-width: 600px) 47vw, 450px"
+            class="about__image about__image--laptop"
+            alt="laptop"
+            src="src/img/laptop-big.png"
+          />
+
+          <div class="about__feature">
+            <svg class="about__feature-icon">
+              <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            <h3 class="about__feature-title heading-tertiary">Claritas est etiam processus dynamicus</h3>
+            <p class="about__feature-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium architecto amet, distinctio
+              laboriosam corporis quibusdam quas eius soluta. Asperiores ipsa aliquid ducimus quod nesciunt ipsam.
+            </p>
+          </div>
+
+          <div class="about__feature">
+            <svg class="about__feature-icon">
+              <use xlink:href="src/img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            <h3 class="about__feature-title heading-tertiary">Litterarum formas humanitatis per</h3>
+            <p class="about__feature-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum nostrum consectetur eveniet magni atque
+              repudiandae eligendi ex sequi hic ab, id odio facere praesentium dolor nemo at et incidunt beatae.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section-training">
-        <h2 class="heading-secondary u-margin-bottom-very-big u-center">Book you training now !</h2>
+      <h2 class="heading-secondary u-margin-bottom-very-big u-center">Book you training now !</h2>
 
-        <div class="cursor">
-            <!-- <div class="cursor__box">
-                <div class="training" data-training='0'>
-                    <img class="training__image training__image--1" src="src/img/waiter-1.jpg"
-                        alt="picture waiters working">
-                    <img class="training__image training__image--2" src="src/img/waiter-2.jpg"
-                        alt="picture waiter serving drink">
-                    <img class="training__image training__image--3" src="src/img/waiter-3.jpg" alt="picture times">
+      <div class="cursor">
+        <!-- <div class="cursor__box">
+          <div class="training" data-training="0">
+            <img class="training__image training__image--1" src="src/img/waiter-1.jpg" alt="picture waiters working" />
+            <img
+              class="training__image training__image--2"
+              src="src/img/waiter-2.jpg"
+              alt="picture waiter serving drink"
+            />
+            <img class="training__image training__image--3" src="src/img/waiter-3.jpg" alt="picture times" />
 
-                    <div class="training__box">
-                        <div>
-                            <h3 class="training__box-role heading-quertenary">LONDON</h3>
-                            <h4 class="training__box-location heading-tertiary"> Waiter training! </h4>
-                        </div>
-                        <p class="training__box-description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Delectus expedita
-                            culpa perferendis earum
-                            animi repudiandae illo rem est harum nisi? Lorem ipsum dolor sit, amet consectetur
-                            adipisicing
-                            elit.
-                            Accusamus, iure! </p>
-                        <button class="btn training__box-btn">Find more!</button>
-                    </div>
-                </div>
+            <div class="training__box">
+              <div>
+                <h3 class="training__box-role heading-quertenary">LONDON</h3>
+                <h4 class="training__box-location heading-tertiary">Waiter training!</h4>
+              </div>
+              <div>
+                <p class="training__box-duration"><span class="text-bold">Duration: </span>2 weeks</p>
+                <p class="training__box-rate">
+                  <span class="text-bold">Earning potential : </span> 10/12 £ per hour
+                </p>
+                <p class="training__box-date"><span class="text-bold">Next training: </span> 19 December</p>
+                <p class="training__box-description">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus expedita culpa perferendis earum
+                  animi repudiandae illo rem est harum nisi? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Accusamus, iure!
+                </p>
+              </div>
+              <button class="btn training__box-btn">Book now!</button>
             </div>
-
-            <div class="cursor__controller">
-                <button class="cursor__btn cursor__btn-previous btn-arrow btn-arrow--active">&larr;</button>
-                <div class="cursor__controller-dots">
-                    <button class="dot" data-dot="1"></button>
-                </div>
-                <button class="cursor__btn cursor__btn-next btn-arrow btn-arrow--active">&rarr;</button>
-            </div> -->
+          </div>
         </div>
 
-
-
+        <div class="cursor__controller">
+          <button class="cursor__btn cursor__btn-previous btn-arrow btn-arrow--active">&larr;</button>
+          <div class="cursor__controller-dots">
+            <button class="dot" data-dot="1"></button>
+          </div>
+          <button class="cursor__btn cursor__btn-next btn-arrow btn-arrow--active">&rarr;</button>
+        </div> -->
+      </div>
     </section>
 
     <section class="section-reviews">
-        <h2 class="heading-secondary u-margin-bottom-very-big u-center">What people thing aboutus!</h2>
+      <h2 class="heading-secondary u-margin-bottom-very-big u-center">What people thing about us!</h2>
 
-        <div class="slider">
-            <!-- <div class="reviews">
+      <div class="slider">
+        <!-- <div class="reviews">
 
                 <div class="review">
                     <img src="src/img/user-1.jpg" alt="review image" class="review__image">
@@ -337,70 +354,64 @@
 
             </div>
             -->
-            <!-- <div class="slider__nav">
+        <!-- <div class="slider__nav">
                 <button type="button" class="slider__btn-previous btn-arrow ">&larr;</button>
                 <button type="button" class="slider__btn-next btn-arrow">&rarr;</button>
             </div>  -->
-
-        </div>
+      </div>
     </section>
 
     <footer class="footer">
+      <div class="footer__media">
+        <img class="logo footer__media-logo" src="src/img/logo.png" alt="logo" />
+        <p class="footer__media-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sunt laudantium doloribus ut enim ea nisi labore!
+          Commodi, laboriosam omnis.
+        </p>
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-facebook-with-circle"></use>
+        </svg>
 
-        <div class="footer__media">
-            <img class="logo footer__media-logo" src="src/img/logo.png" alt="logo">
-            <p class="footer__media-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sunt laudantium
-                doloribus ut enim ea nisi
-                labore! Commodi, laboriosam omnis.
-            </p>
-            <svg class="footer__media-icon">
-                <use xlink:href="src/img/sprite.svg#icon-facebook-with-circle"></use>
-            </svg>
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-github-with-circle"></use>
+        </svg>
 
-            <svg class="footer__media-icon">
-                <use xlink:href="src/img/sprite.svg#icon-github-with-circle"></use>
-            </svg>
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-instagram-with-circle"></use>
+        </svg>
 
-            <svg class="footer__media-icon">
-                <use xlink:href="src/img/sprite.svg#icon-instagram-with-circle"></use>
-            </svg>
+        <svg class="footer__media-icon">
+          <use xlink:href="src/img/sprite.svg#icon-twitter-with-circle"></use>
+        </svg>
+      </div>
 
-            <svg class="footer__media-icon">
-                <use xlink:href="src/img/sprite.svg#icon-twitter-with-circle"></use>
-            </svg>
-        </div>
+      <div class="footer__lists">
+        <ul class="footer__list footer__list--about">
+          <li class="footer__list-heading">About</li>
+          <li>About us</li>
+          <li>Services</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li><a class="footer__link" href="credits.html">Credits</a></li>
+        </ul>
 
-        <div class="footer__lists">
-            <ul class="footer__list footer__list--about ">
-                <li class="footer__list-heading">About</li>
-                <li>About us</li>
-                <li>Services</li>
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li><a class="footer__link" href="credits.html">Credits</a></li>
+        <ul class="footer__list footer__list--company">
+          <li class="footer__list-heading">Company</li>
+          <li>Out Team</li>
+          <li>FAQ</li>
+        </ul>
 
-            </ul>
+        <ul class="footer__list footer__list--support">
+          <li class="footer__list-heading">Support</li>
+          <li>Account</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
 
-            <ul class="footer__list footer__list--company">
-                <li class="footer__list-heading">Company</li>
-                <li>Out Team</li>
-                <li>FAQ</li>
-            </ul>
-
-            <ul class="footer__list footer__list--support">
-                <li class="footer__list-heading">Support</li>
-                <li>Account</li>
-                <li>Contact us</li>
-            </ul>
-        </div>
-
-        <div class="footer__copyright">
-            <p class="footer__copyright-copy"> &copy; Copyright 2021 by Manea Valentin Cornel.</p>
-            <p class="footer__copyright-terms"> Privacy Policy & Terms of use</p>
-        </div>
-
+      <div class="footer__copyright">
+        <p class="footer__copyright-copy">&copy; Copyright 2021 by Manea Valentin Cornel.</p>
+        <p class="footer__copyright-terms">Privacy Policy & Terms of use</p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
